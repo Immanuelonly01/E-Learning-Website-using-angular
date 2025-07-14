@@ -1,0 +1,101 @@
+<div class="container d-flex justify-content-center align-items-center min-vh-100 fade-in">
+  <div class="card glass-card p-4 border-0 rounded-5 shadow-lg w-100" style="max-width: 600px;">
+    <div class="text-center mb-4">
+      <i class="bi bi-mortarboard-fill display-4 gradient-text"></i>
+      <h2 class="fw-bold gradient-text">Welcome to E-Learn</h2>
+      <p class="text-muted">Empower your future with learning</p>
+    </div>
+
+    <!-- Tabs -->
+    <ul class="nav nav-pills nav-justified mb-4" id="authTabs">
+      <li class="nav-item">
+        <button class="nav-link active fw-semibold" data-bs-toggle="pill" data-bs-target="#loginPane">Login</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link fw-semibold" data-bs-toggle="pill" data-bs-target="#signupPane">Sign Up</button>
+      </li>
+    </ul>
+
+    <!-- Tab Contents -->
+    <div class="tab-content">
+      <!-- Login Tab -->
+      <div class="tab-pane fade show active animate__animated animate__fadeInRight" id="loginPane">
+        <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+          <div class="form-floating mb-3">
+            <input type="email" formControlName="loginEmail" class="form-control" id="loginEmail" placeholder="Email">
+            <label for="loginEmail"><i class="bi bi-envelope-fill me-2"></i>Email address</label>
+            <div class="text-danger small mt-1" *ngIf="loginForm.get('loginEmail')?.touched && loginForm.get('loginEmail')?.invalid">
+              Valid email is required.
+            </div>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" formControlName="loginPassword" class="form-control" id="loginPassword" placeholder="Password">
+            <label for="loginPassword"><i class="bi bi-lock-fill me-2"></i>Password</label>
+            <div class="text-danger small mt-1" *ngIf="loginForm.get('loginPassword')?.touched && loginForm.get('loginPassword')?.invalid">
+              Password must be at least 6 characters.
+            </div>
+          </div>
+           <div class="d-flex justify-content-between align-items-center mb-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="rememberMe">
+        <label class="form-check-label small text-muted" for="rememberMe">
+          Remember Me
+        </label>
+      </div>
+      <div>
+        <a href="#" class="small text-decoration-none">Forgot Password?</a>
+      </div>
+    </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-gradient rounded-pill py-2">Login</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Sign Up Tab -->
+      <div class="tab-pane fade animate__animated animate__fadeInLeft" id="signupPane">
+        <form [formGroup]="signupForm" (ngSubmit)="onSignupSubmit()">
+          <div class="form-floating mb-3">
+            <input type="text" formControlName="signupName" class="form-control" id="signupName" placeholder="Full Name">
+            <label for="signupName"><i class="bi bi-person-fill me-2"></i>Full Name</label>
+            <div class="text-danger small mt-1" *ngIf="signupForm.get('signupName')?.touched && signupForm.get('signupName')?.invalid">
+              Name must be at least 3 characters.
+            </div>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" formControlName="signupEmail" class="form-control" id="signupEmail" placeholder="Email">
+            <label for="signupEmail"><i class="bi bi-envelope-fill me-2"></i>Email address</label>
+            <div class="text-danger small mt-1" *ngIf="signupForm.get('signupEmail')?.touched && signupForm.get('signupEmail')?.invalid">
+              Valid email is required.
+            </div>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" formControlName="signupPassword" class="form-control" id="signupPassword" placeholder="Password">
+            <label for="signupPassword"><i class="bi bi-lock-fill me-2"></i>Create Password</label>
+            <div class="text-danger small mt-1" *ngIf="signupForm.get('signupPassword')?.touched && signupForm.get('signupPassword')?.invalid">
+              Password must be at least 6 characters.
+            </div>
+          </div>
+           <div class="d-flex justify-content-between align-items-center mb-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="rememberMe">
+        <label class="form-check-label small text-muted" for="rememberMe">
+          Remember Me
+        </label>
+      </div>
+      <div>
+        <a href="#" class="small text-decoration-none">Forgot Password?</a>
+      </div>
+    </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-signup rounded-pill py-2">Sign Up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <small class="text-muted">By continuing, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</small>
+    </div>
+  </div>
+</div>

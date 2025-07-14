@@ -1,0 +1,85 @@
+/* Animate.css fade-in */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Glass Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+.glass-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(to right, #0d6efd, #6610f2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Login Gradient Button */
+.btn-gradient {
+  background: linear-gradient(to right, #0d6efd, #6610f2);
+  border: none;
+  color: white;
+  transition: 0.3s ease;
+}
+.btn-gradient:hover {
+  background: linear-gradient(to right, #6610f2, #0d6efd);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Sign Up Green Gradient Button */
+.btn-signup {
+  background: linear-gradient(to right, #6610f2, #0d6efd);
+  border: none;
+  color: white;
+  transition: 0.3s ease;
+}
+.btn-signup:hover {
+  background: linear-gradient(to right, #6610f2, #0d6efd);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Fields */
+.form-control {
+  border-radius: 50px;
+  padding: 12px 20px;
+  transition: border-color 0.3s ease;
+}
+.form-control:focus {
+  border-color: #6610f2;
+  box-shadow: 0 0 0 0.2rem rgba(102, 16, 242, 0.25);
+}
+
+/* Nav Pills */
+.nav-pills .nav-link {
+  border-radius: 50px;
+  padding: 10px 20px;
+  color: #333;
+}
+.nav-pills .nav-link.active {
+  background: linear-gradient(to right, #0d6efd, #6610f2);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Fix */
+@media (max-width: 576px) {
+  .glass-card {
+    padding: 2rem 1.2rem;
+  }
+}

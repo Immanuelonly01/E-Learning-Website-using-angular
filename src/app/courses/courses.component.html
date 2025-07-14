@@ -1,0 +1,112 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm px-5 py-3">
+  <a class="navbar-brand fw-bold fs-2" href="#">
+    <i class="bi bi-mortarboard-fill me-2 gradient-text"></i>
+    <span class="gradient-text">E-Learn</span>
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav align-items-center">
+      <li class="nav-item mx-3">
+        <a class="nav-link nav-text fs-5" routerLink="/home">Home</a>
+      </li>
+      <li class="nav-item mx-3">
+        <a class="nav-link nav-text active fs-5" routerLink="/courses">Courses</a>
+      </li>
+      <li class="nav-item mx-3">
+        <a class="nav-link nav-text fs-5" routerLink="/about">About</a>
+      </li>
+      <li class="nav-item mx-3">
+        <a class="btn btn-gradient text-white px-4 py-2 rounded-pill shadow-sm" routerLink="/login">Login / Sign Up</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Course Listing -->
+<section class="container fade-in py-5">
+  <h2 class="text-center mb-5 fw-bold display-5">Our Top Courses</h2>
+  <div class="row g-4">
+    <div class="col-md-4" *ngFor="let course of courses">
+      <div class="card h-100 shadow-lg border-0 hover-gradient course-card text-start">
+        <img [src]="course.image" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">{{ course.title }}</h5>
+          <p class="card-text text-muted">{{ course.description }}</p>
+          <ul class="list-unstyled small mb-3">
+            <li><i class="bi bi-person-fill me-2"></i>{{ course.instructor }}</li>
+            <li><i class="bi bi-clock-fill me-2"></i>{{ course.duration }}</li>
+            <li><i class="bi bi-bar-chart-fill me-2"></i>{{ course.level }}</li>
+          </ul>
+        </div>
+        <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center">
+          <span class="badge bg-success">{{ course.price }}</span>
+          <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Categories Filter -->
+<section class="container py-5 fade-in hover-section">
+  <h3 class="fw-bold text-center mb-4">Browse by Category</h3>
+  <div class="row text-center g-3">
+    <div class="col-6 col-md-3" *ngFor="let category of ['Full Stack', 'AI & ML', 'Cloud', 'Data Science']">
+      <button class="btn btn-outline-dark w-100 rounded-pill text-capitalize">
+        {{ category }}
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Course Highlight -->
+<section class="container py-5 fade-in hover-section">
+  <div class="row align-items-center">
+    <div class="col-md-6 mb-4 mb-md-0">
+      <img src="../../assets/course1.jpg" class="img-fluid rounded shadow" alt="Featured Course">
+    </div>
+    <div class="col-md-6">
+      <h3 class="fw-bold mb-3">Featured: Mastering Full Stack Development</h3>
+      <p class="text-muted">A comprehensive course covering frontend, backend, databases, and deployment using modern technologies like Angular, Node.js, MongoDB, and more.</p>
+      <ul class="list-unstyled mb-4">
+        <li><i class="bi bi-check-circle-fill text-success me-2"></i> Real-world Projects</li>
+        <li><i class="bi bi-check-circle-fill text-success me-2"></i> Industry Expert Mentors</li>
+        <li><i class="bi bi-check-circle-fill text-success me-2"></i> Certification Included</li>
+      </ul>
+      <a href="#" class="btn btn-gradient text-white px-4 py-2 rounded-pill">Enroll in Featured Course</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="container py-5 fade-in hover-section">
+  <h3 class="fw-bold text-center mb-4">Frequently Asked Questions</h3>
+  <div class="accordion" id="faqAccordion">
+    <div class="accordion-item" *ngFor="let faq of faqs; let i = index">
+      <h2 class="accordion-header" [id]="'faq' + i">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                [attr.data-bs-target]="'#collapse' + i" [attr.aria-controls]="'collapse' + i">
+          {{ faq.question }}
+        </button>
+      </h2>
+      <div [id]="'collapse' + i" class="accordion-collapse collapse" [class.show]="i === 0" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">{{ faq.answer }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Banner -->
+<section class="cta-banner text-white text-center hover-section fade-in py-5">
+  <h2 class="fw-bold mb-3">Still Thinking?</h2>
+  <p class="mb-4">Join over 10,000 learners who started their tech journey with us. Learn at your pace and level up your career.</p>
+  <a href="#" class="btn btn-light px-4 py-2 rounded-pill shadow-sm">Start Your First Course</a>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+  <p class="mb-0">© 2025 E-Learn. All Rights Reserved.</p>
+</footer>

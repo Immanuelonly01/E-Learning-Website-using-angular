@@ -1,1 +1,299 @@
-/* You can add global styles to this file, and also import other style files */
+/* General Page Load Fade In */
+body {
+  opacity: 0;
+  animation: fadePage 0.8s ease-in-out forwards;
+}
+
+@keyframes fadePage {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Hover Effects */
+.hover-shadow {
+  transition: 0.3s;
+}
+.hover-shadow:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hover-zoom {
+  transition: transform 0.3s ease;
+}
+.hover-zoom:hover {
+  transform: scale(1.03);
+}
+
+/* Navigation */
+.nav-text {
+  color: #333 !important;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-decoration: none !important;
+}
+.nav-text:hover {
+  color: #0d6efd !important;
+  transform: scale(1.05);
+}
+
+/* Gradient Button Styling */
+.btn-gradient {
+  background: linear-gradient(90deg, #0d6efd, #20c997, #ffc107, #dc3545);
+  background-size: 300% 100%;
+  transition: background-position 0.4s ease-in-out;
+  border: none;
+}
+.btn-gradient:hover {
+  background-position: 100% 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(90deg, #007bff, #00c6ff, #ffc107, #dc3545);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: animateGradient 10s ease-in-out infinite;
+}
+@keyframes animateGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Category Card Styling */
+.category-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  background: #fff;
+}
+.category-card i {
+  font-size: 2.2rem;
+}
+.category-card h5 {
+  font-size: 1.3rem;
+}
+.category-card p {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Logo Image */
+.logo-img {
+  width: 120px;
+  transition: transform 0.3s ease;
+}
+.logo-img:hover {
+  transform: scale(1.15);
+}
+
+/* Hover Gradient Container */
+.hover-gradient {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  background: #fff;
+}
+.hover-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #0d6efd 0%, #20c997 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+.hover-gradient:hover::before {
+  opacity: 0.1;
+}
+.hover-gradient * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Course Card Hover */
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* About Section */
+.about-section {
+  text-align: center;
+  padding: 4rem 0;
+}
+.about-section h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.about-section p {
+  color: #6c757d;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #f8f9fa;
+  padding: 4rem 0;
+}
+.testimonials h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.testimonials .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+}
+.testimonials .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+.testimonials .card p {
+  font-style: italic;
+  font-size: 1rem;
+  color: #555;
+}
+.testimonials .card h6 {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+.testimonials .card span {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+/* CTA Banner */
+.cta-banner {
+  background: linear-gradient(90deg, #007bff, #20c997);
+  color: #fff;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+.cta-banner h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.cta-banner p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.cta-banner .btn {
+  background-color: #fff;
+  color: #007bff;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+.cta-banner .btn:hover {
+  background-color: #e9ecef;
+  color: #20c997;
+}
+
+/* Fade In on Load */
+.fade-in {
+  animation: fadeIn 1.2s ease-in-out both;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide In from Left */
+.slide-in-left {
+  animation: slideInLeft 1s ease both;
+}
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scroll-based Animation */
+.animated-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-in-out;
+}
+.animated-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.hover-section {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+.instructor-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.instructor-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #0d6efd, #20c997);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.instructor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.instructor-card:hover::before {
+  opacity: 0.1;
+}
+
+.instructor-card * {
+  position: relative;
+  z-index: 1;
+}
+.navbar .nav-link.active {
+  font-weight: 700;
+  color: #0d6efd !important;
+  position: relative;
+}
+
+.navbar .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0d6efd;
+  border-radius: 2px;
+}

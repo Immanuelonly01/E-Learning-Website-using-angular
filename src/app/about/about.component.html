@@ -1,0 +1,126 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm px-5 py-3">
+  <a class="navbar-brand fw-bold fs-2" href="#">
+    <i class="bi bi-mortarboard-fill me-2 gradient-text"></i>
+    <span class="gradient-text">E-Learn</span>
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav align-items-center">
+      <li class="nav-item mx-3">
+        <a class="nav-link nav-text fs-5" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      </li>
+      <li class="nav-item mx-3">
+        <a class="nav-link nav-text fs-5" routerLink="/courses" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Courses</a>
+      </li>
+      <li class="nav-item mx-3">
+        <a class="nav-link nav-text fs-5" routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">About</a>
+      </li>
+      <li class="nav-item mx-3">
+        <a class="btn btn-gradient text-white px-4 py-2 rounded-pill shadow-sm" routerLink="/login">Login / Sign Up</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- About Intro -->
+<div class="container fade-in py-5 about-section  text-center">
+  <h2 class="fw-bold mb-4 display-5">About E-Learn</h2>
+  <p class="text-muted mb-5 mx-auto" style="max-width: 800px;">
+    E-Learn is a next-generation online learning platform committed to providing quality education through interactive and engaging content. Our mission is to make expert-led education affordable and accessible to learners around the globe.
+  </p>
+
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card border-0 shadow-sm hover-section p-4 h-100">
+        <i class="bi bi-globe fs-1 text-primary mb-3"></i>
+        <h5 class="fw-bold mb-2">Global Reach</h5>
+        <p class="text-muted">Learners from over 50+ countries are transforming their skills with us.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card border-0 shadow-sm hover-section p-4 h-100">
+        <i class="bi bi-award-fill fs-1 text-success mb-3"></i>
+        <h5 class="fw-bold mb-2">Certified Courses</h5>
+        <p class="text-muted">All our courses come with certifications recognized by industry experts.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card border-0 shadow-sm hover-section p-4 h-100">
+        <i class="bi bi-person-video3 fs-1 text-warning mb-3"></i>
+        <h5 class="fw-bold mb-2">Expert Instructors</h5>
+        <p class="text-muted">Our instructors are industry leaders and professionals with real-world experience.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Our Mission and Vision -->
+<div class="container fade-in py-5 text-center hover-section">
+  <div class="row g-4">
+    <div class="col-md-6">
+      <h4 class="fw-bold mb-3">Our Mission</h4>
+      <p class="text-muted">To bridge the skill gap by providing accessible and affordable education that empowers learners to thrive in the modern digital economy.</p>
+    </div>
+    <div class="col-md-6">
+      <h4 class="fw-bold mb-3">Our Vision</h4>
+      <p class="text-muted">To become the most trusted online learning platform globally, known for quality, innovation, and learner success.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Core Values -->
+<div class="container fade-in py-5 hover-section">
+  <h3 class="fw-bold text-center mb-5">Our Core Values</h3>
+  <div class="row g-4 text-center">
+    <div class="col-md-3">
+      <div class="p-4 border rounded shadow-sm h-100">
+        <i class="bi bi-lightbulb-fill fs-2 text-primary mb-2"></i>
+        <h6 class="fw-bold">Innovation</h6>
+        <p class="small text-muted">We embrace change and encourage innovation to meet the evolving needs of learners.</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="p-4 border rounded shadow-sm h-100">
+        <i class="bi bi-people-fill fs-2 text-success mb-2"></i>
+        <h6 class="fw-bold">Community</h6>
+        <p class="small text-muted">We build a global community of learners who support and uplift each other.</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="p-4 border rounded shadow-sm h-100">
+        <i class="bi bi-award fs-2 text-warning mb-2"></i>
+        <h6 class="fw-bold">Excellence</h6>
+        <p class="small text-muted">We strive for excellence in everything we do — from content to support.</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="p-4 border rounded shadow-sm h-100">
+        <i class="bi bi-shield-check fs-2 text-danger mb-2"></i>
+        <h6 class="fw-bold">Integrity</h6>
+        <p class="small text-muted">We operate with transparency, trust, and ethical values at our core.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Join Us CTA -->
+<div class="container text-center fade-in hover-section py-5">
+  <h3 class="fw-bold mb-3">Want to Join Our Team?</h3>
+  <p class="text-muted mb-4 mx-auto" style="max-width: 600px;">
+    We're always looking for passionate educators, designers, and developers to help us create the future of online learning. Reach out and become part of our mission!
+  </p>
+  <a href="#" class="btn btn-gradient text-white px-4 py-2 rounded-pill shadow-sm">Join as Instructor</a>
+</div>
+
+<!-- Back Button -->
+<div class="container text-center mt-5 mb-4 fade-in">
+  <a href="/home" class="btn btn-primary rounded-pill px-4 py-2 shadow-sm">Back to Home</a>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4 mt-5">
+  <p class="mb-0">© 2025 E-Learn. All Rights Reserved.</p>
+</footer>

@@ -1,0 +1,240 @@
+<nav class="navbar navbar-expand-lg bg-white shadow-sm px-5 py-3">
+  <a class="navbar-brand fw-bold fs-2" href="#">
+    <i class="bi bi-mortarboard-fill me-2 gradient-text"></i>
+    <span class="gradient-text">E-Learn</span>
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav align-items-center">
+      <li class="nav-item mx-3">
+        <a class="nav-link nav-text fs-5"
+   routerLink="/home"
+   routerLinkActive="active"
+   [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      </li>
+      <li class="nav-item mx-3">
+        <a class="nav-link nav-text fs-5" routerLink="/courses">Courses</a>
+      </li>
+      <li class="nav-item mx-3">
+        <a class="nav-link nav-text fs-5" routerLink="/about">About</a>
+      </li>
+      <li class="nav-item mx-3">
+        <a class="btn btn-gradient text-white px-4 py-2 rounded-pill shadow-sm" routerLink="/login">Login / Sign Up</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Carousel -->
+<div id="heroCarousel" class="carousel slide fade-in" data-bs-ride="carousel" data-bs-interval="2000">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+
+  <div class="carousel-inner ">
+    <div class="carousel-item active">
+      <div class="position-relative w-100" style="height: 500px;">
+        <img src="../../assets/hero.jpg" class="w-100 h-100 object-fit-cover position-absolute top-0 start-0" alt="Hero Image">
+        <div class="position-absolute top-50 start-50 translate-middle text-dark text-center px-4 animate__animated animate__fadeInUp" style="z-index: 2; max-width: 600px;">
+          <h1 class="fw-bold">Learn The Skills You Need To Succeed</h1>
+          <p class="text-dark">Online courses from top instructors. Learn at your pace.</p>
+          <a class="btn btn-primary px-4 py-2 rounded-pill" href="#">Start Learning</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="position-relative w-100" style="height: 500px;">
+        <img src="../../assets/hero2.jpg" class="w-100 h-100 object-fit-cover position-absolute top-0 start-0" alt="Slide Image">
+        <div class="position-absolute top-50 start-50 translate-middle text-dark text-center px-4 animate__animated animate__fadeInUp" style="z-index: 2; max-width: 600px;">
+          <h1 class="fw-bold">Master In-Demand Tech Skills</h1>
+          <p class="text-dark">Courses for full stack, AI, and cloud computing.</p>
+          <a class="btn btn-success px-4 py-2 rounded-pill" href="#">Explore Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="position-relative w-100" style="height: 500px;">
+        <img src="../../assets/hero3.jpg" class="w-100 h-100 object-fit-cover position-absolute top-0 start-0" alt="Slide Image">
+        <div class="position-absolute top-50 start-50 translate-middle text-dark text-center px-4 animate__animated animate__fadeInUp" style="z-index: 2; max-width: 600px;">
+          <h1 class="fw-bold">Learn Anywhere Anytime</h1>
+          <p class="text-dark">Access all your courses on mobile or desktop.</p>
+          <a class="btn btn-warning px-4 py-2 rounded-pill" href="#">Download App</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="position-relative w-100" style="height: 500px;">
+        <img src="../../assets/hero4.avif" class="w-100 h-100 object-fit-cover position-absolute top-0 start-0" alt="Slide Image">
+        <div class="position-absolute top-50 start-50 translate-middle text-dark text-center px-4 animate__animated animate__fadeInUp" style="z-index: 2; max-width: 600px;">
+          <h1 class="fw-bold">Get Certified by Experts</h1>
+          <p class="text-dark">Earn certificates and boost your career profile.</p>
+          <a class="btn btn-danger px-4 py-2 rounded-pill" href="#">View Certifications</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+  <span class="carousel-control-next-icon " aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button>
+
+</div>
+
+<!-- Companies Section -->
+<div class="container text-center fade-in hover-section my-5">
+  <h2 class="mb-5 fw-bold display-5">Trusted by Leading Companies</h2>
+  <div class="row justify-content-center align-items-center">
+    <div class="col-auto" *ngFor="let logo of companyLogos">
+      <img [src]="logo" alt="Company Logo" class="mx-4 logo-img" />
+    </div>
+  </div>
+</div>
+
+<!-- Categories Section -->
+<div class="container fade-in py-5 hover-section text-center">
+  <h2 class="fw-bold mb-5 display-5">Popular Categories</h2>
+  <div class="row g-4">
+    <div class="col-md-4" *ngFor="let cat of categories">
+      <div class="card p-4 shadow-sm border-0 category-card hover-gradient h-100 text-start">
+        <div class="d-flex align-items-center mb-3">
+          <i class="{{cat.icon}} fs-1 text-primary me-3"></i>
+          <div>
+            <h5 class="fw-bold mb-1">{{ cat.title }}</h5>
+            <span class="text-muted small">{{ cat.courses }} Courses</span>
+          </div>
+        </div>
+        <p class="text-muted">{{ cat.description }}</p>
+        <a href="#" class="stretched-link text-primary fw-semibold">Explore</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container fade-in py-5">
+  <h3 class="text-center mb-4 fw-bold">Pick A Course To Get Started</h3>
+  <div class="row g-4">
+    <div class="col-md-4" *ngFor="let course of courses">
+      <div class="card h-100 shadow-lg border-0 hover-gradient course-card text-start">
+        <img [src]="course.image" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">{{ course.title }}</h5>
+          <p class="card-text text-muted">{{ course.description }}</p>
+          <ul class="list-unstyled small mb-3">
+            <li><i class="bi bi-person-fill me-2"></i>{{ course.instructor }}</li>
+            <li><i class="bi bi-clock-fill me-2"></i>{{ course.duration }}</li>
+            <li><i class="bi bi-bar-chart-fill me-2"></i>{{ course.level }}</li>
+          </ul>
+        </div>
+        <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center">
+          <span class="badge bg-success">{{ course.price }}</span>
+          <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container fade-in py-5 hover-section text-center">
+  <h2 class="fw-bold mb-5 display-5">Meet Our Instructors</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card border-0  instructor-card shadow-sm">
+        <img src="../../assets/instructor1.webp" class="card-img-top rounded-top" alt="Instructor">
+        <div class="card-body">
+          <h5 class="fw-bold">Dr. Priya Kapoor</h5>
+          <p class="text-muted">AI & ML Expert</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card border-0 instructor-card shadow-sm">
+        <img src="../../assets/instructor2.jpg" class="card-img-top rounded-top" alt="Instructor">
+        <div class="card-body">
+          <h5 class="fw-bold">John Matthew</h5>
+          <p class="text-muted">Full Stack Developer</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card border-0 instructor-card shadow-sm">
+        <img src="../../assets/instructor3.jpg" class="card-img-top rounded-top" alt="Instructor">
+        <div class="card-body">
+          <h5 class="fw-bold">Sara Thomas</h5>
+          <p class="text-muted">Cloud Architect</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Newsletter Section -->
+<div class="newsletter-section hover-section bg-light py-5 fade-in">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3">Stay in the Loop</h2>
+    <p class="mb-4">Get the latest updates on new courses and special offers.</p>
+    <form class="row justify-content-center">
+      <div class="col-md-6 col-sm-10">
+        <div class="input-group">
+          <input type="email" class="form-control rounded-start-pill" placeholder="Enter your email" required>
+          <button class="btn btn-primary rounded-end-pill px-4" type="submit">Subscribe</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="about-section container text-center hover-section fade-in py-5">
+  <h2 class="fw-bold mb-4 display-5">About E-Learn</h2>
+  <p class="text-muted mx-auto" style="max-width: 800px;">
+    E-Learn is a next-generation learning platform offering expert-led online courses across full stack development, AI, cloud computing, and more. We are committed to empowering learners globally with affordable, accessible, and flexible learning.
+  </p>
+</div>
+
+<div class="testimonials fade-in hover-section bg-light py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-5 display-5">What Our Learners Say</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card p-4 border-0 shadow-sm h-100">
+          <p class="fst-italic">"E-Learn transformed my career! The AI course was practical and easy to follow."</p>
+          <h6 class="fw-bold mb-0">Aarav M.</h6>
+          <span class="text-muted small">Data Scientist</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 border-0 shadow-sm h-100">
+          <p class="fst-italic">"High-quality content and instructors. I loved the Full Stack Web Dev course."</p>
+          <h6 class="fw-bold mb-0">Sneha R.</h6>
+          <span class="text-muted small">Frontend Developer</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 border-0 shadow-sm h-100">
+          <p class="fst-italic">"Affordable, flexible, and totally worth it. I could learn at my own pace."</p>
+          <h6 class="fw-bold mb-0">Rahul K.</h6>
+          <span class="text-muted small">Cloud Engineer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-banner bg-primary text-white text-center hover-section fade-in py-5">
+  <h2 class="fw-bold mb-3">Ready to Transform Your Career?</h2>
+  <p class="mb-4">Join thousands of learners and gain real-world skills with E-Learn.</p>
+  <a href="#" class="btn btn-light px-4 py-2 rounded-pill shadow-sm">Get Started for Free</a>
+</div>
+
+<footer class="bg-dark text-white text-center  py-4">
+  <p class="mb-0">© 2025 E-Learn. All Rights Reserved.</p>
+</footer>
